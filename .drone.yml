@@ -6,7 +6,7 @@ steps:
 - name: testcafe
   image: testcafe/testcafe
   commands:
-  - testcafe chromium *_test.js
+  - /opt/testcafe/docker/testcafe-docker.sh chromium *_test.js
   environment:
     ADMIN_PASSWORD:
       from_secret: admin_password
